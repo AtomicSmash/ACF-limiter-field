@@ -1,5 +1,5 @@
 === Advanced Custom Fields: Limiter Field ===
-Contributors: AtomicSmash
+Contributors: Atomicsmash
 Tags: act, advanced custom fields, limiter, character number
 Requires at least: 3.0.1
 Tested up to: 3.4
