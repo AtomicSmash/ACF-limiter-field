@@ -11,18 +11,24 @@ This plugin provides a textarea that limits the number of characters a user can 
 
 == Description ==
 
+__Advanced Custom fields 4 is required.__
+
 This plugin provides an Advanced Custom Field textarea that limits the number of characters a user can add. The limit is cleanly represented by a jQuery Ui progress bar. You can define the number of characters on a per field basis.
 
 I developed this field for personal use and has been tested on a number of different Wordpress sites.
 
-If you require a copy that work with ACF3 - please contact.
-
-__Advanced Custom fields 4 is required.__
+If you require a copy that works with Advanced custom fields v3- please contact.
 
 This has been tested in:
 
 *   ACF - Repeater fields
 *   ACF - Flexible content fields
+*   ACF - Option pages
+
+
+__ToDo__
+
+*   Add a word count option
 
 
 == Installation ==
