@@ -1,43 +1,44 @@
 === Advanced Custom Fields: Limiter Field ===
-Contributors: Atomic Smash
-Tags: 
-Requires at least: 3.4
-Tested up to: 3.3.1
-Stable tag: trunk
+Contributors: Atomic Smash Ltd - Bristol
+Tags: act, advanced custom fields, limiter, character number
+Requires at least: 3.0.1
+Tested up to: 3.4
+Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This field provides a textarea that limits the number of characters the a user can add. The limit is cleanly represented by a jQuery Ui progress bar. You can define the number of characters on a per field basis.
+This plugin provides a textarea that limits the number of characters a user can add. The limit is cleanly represented by a jQuery UI progress bar. 
 
+== Description ==
 
-= Compatibility =
+This plugin provides an Advanced Custom Field textarea that limits the number of characters a user can add. The limit is cleanly represented by a jQuery Ui progress bar. You can define the number of characters on a per field basis.
 
-This add-on will work with:
+I developed this field for personal use and has been tested on a number of different Wordpress sites.
 
-* version 4 and up
+If you require a copy that work with ACF3 - please contact.
+
+__Advanced Custom fields 4 is required.__
+
+This has been tested in:
+
+*   ACF - Repeater fields
+*   ACF - Flexible content fields
+
 
 == Installation ==
 
-This add-on can be treated as both a WP plugin and a theme include.
+1. Download the plugin
+1. Extract zip and place plugin folder in /wp-content/plugins/
+1. Login into your wordpress installation and activate plugin
 
-= Plugin =
-1. Copy the folder into your plugins folder
-2. Activate the plugin via the Plugins admin page
 
-= Include =
-1.	Copy the folder into your theme folder (can use sub folders). You can place the folder anywhere inside the 'wp-content' directory
-2.	Edit your functions.php file and add the code below (Make sure the path is correct to include the acf-limiter.php file)
+== Screenshots ==
 
-`
-add_action('acf/register_fields', 'my_register_fields');
+1. This is the field in action.
+1. These are it's options
 
-function my_register_fields()
-{
-	include_once('path-to-plugin/acf-limiter.php');
-}
-`
 
 == Changelog ==
 
-= 0.0.1 =
-* Initial Release.
+= 1.0.0 =
+* Initial release
