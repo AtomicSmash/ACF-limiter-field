@@ -1,8 +1,8 @@
 === Advanced Custom Fields: Limiter Field ===
 Contributors: Atomicsmash
-Tags: act, advanced custom fields, limiter, character number
+Tags: ACF, ACF3, ACF4, Advanced Custom Fields, Limiter, character number, word count
 Requires at least: 3.0.1
-Tested up to: 3.4
+Tested up to: 3.5.1
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -11,23 +11,19 @@ This plugin provides a textarea that limits the number of characters a user can 
 
 == Description ==
 
-__Advanced Custom fields 4 is required.__
+__Works with ACF v3 and v4__
 
 This plugin provides an Advanced Custom Field textarea that limits the number of characters a user can add. The limit is cleanly represented by a jQuery Ui progress bar. You can define the number of characters on a per field basis.
 
 I developed this field for personal use and has been tested on a number of different Wordpress sites.
 
-If you require a copy that works with Advanced custom fields v3- please contact.
-
 This has been tested in:
-
 *   ACF - Repeater fields
 *   ACF - Flexible content fields
 *   ACF - Option pages
 
 
 __ToDo__
-
 *   Add a word count option
 
 

@@ -24,7 +24,7 @@
 	    
 	    limit = $(currentField).data('characterlimit');
 	    
-	    console.log(chars);
+	    //console.log(chars);
 	    if (chars > limit) {
 	        currentField.value = currentField.value.substr(0, limit);
 	        chars = limit;

@@ -3,7 +3,7 @@
 Plugin Name: Advanced Custom Fields: Limiter
 Plugin URI: {{git_url}}
 Description: This field provides a textarea that limits the number of characters the a user can add. The limit is cleanly represented by a jQuery Ui progress bar. You can define the number of characters on a per field basis.
-Version: 1.0.0
+Version: 1.0.1
 Author: Atomic Smash - David Darke
 Author URI: atomicsmash.co.uk
 License: GPLv2 or later
@@ -11,8 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 
-class acf_field_limiter_plugin
-{
+class acf_field_limiter_plugin{
 	/*
 	*  Construct
 	*
@@ -34,7 +33,18 @@ class acf_field_limiter_plugin
 		// version 4+
 		add_action('acf/register_fields', array($this, 'register_fields'));	
 
-		
+		add_action( 'init', array( $this, 'init' ));
+
+	}
+	
+	
+	function init()
+	{
+		if(function_exists('register_field'))
+		{ 
+			//echo("s");
+			register_field('acf_field_limiter', dirname(__File__) . '/limiter-v3.php');
+		}
 	}
 	
 	/*
