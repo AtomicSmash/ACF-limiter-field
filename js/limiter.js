@@ -32,14 +32,14 @@
 	
 	    charactersRemaining = limit - chars;
 	    
+	    $(currentField).next().next(".counterWrapper").children(".limiterCount").html(chars);
+	    
 	    percentage = Math.floor((chars / limit)*100);
 	    
 	
 	    $( progressBar ).progressbar({
 	      value: percentage
 	    });
-	
-	
 	
 	}
 

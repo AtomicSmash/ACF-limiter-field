@@ -145,6 +145,23 @@ class acf_field_limiter extends acf_Field
 				?>
 			</td>
 		</tr>
+		<tr class="field_option field_option_<?php echo $this->name; ?>">
+			<td class="label">
+				<label><?php _e("Display character count",'acf'); ?></label>
+			</td>
+			<td>
+				<?php
+				do_action('acf/create_field', array(
+					'type'	=>	'radio',
+					'name'	=>	'fields['.$key.'][displayCount]',
+					'value'	=>	$field['displayCount'],
+					'layout'	=>	'horizontal',
+					'choices' => array('No','Yes')
+				));
+				?>
+			</td>
+		</tr>
+		
 		<?php
 
 	}
@@ -177,6 +194,11 @@ class acf_field_limiter extends acf_Field
 		
 		echo('<div id="progressbar-'.$field['id'].'" class="progressBar"></div>');
 		
+		if(isset($field['displayCount'])){
+			if($field['displayCount'] == 1){
+				echo('<div class="counterWrapper"><span class="limiterCount"></span> / <span class="limiterTotal">'.$field['character_number'].'</span></div>');
+			}
+		}
 		
 	}
 	
@@ -247,11 +269,14 @@ class acf_field_limiter extends acf_Field
 		
 		wp_register_style( 'jquery-ui-progressbar.min', $this->settings['dir'] . 'css/jquery-ui-progressbar.min.css', array('acf-input'), $this->settings['version'] ); 
 		
+		wp_register_style( 'limiterCSS', $this->settings['dir'] . 'css/limiter.css', array('acf-input'), $this->settings['version'] ); 
+		
 		//jquery-ui-progressbar
 		// styles
 		wp_enqueue_style(array(
-			'jquery-ui-progressbar.min',	
+			'jquery-ui-progressbar.min','limiterCSS'
 		));		
+		
 		
 		
 		
