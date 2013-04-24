@@ -24,7 +24,6 @@ This has been tested in:
 *   ACF - Option pages
 
 
-
 == Installation ==
 
 1. Download the plugin
