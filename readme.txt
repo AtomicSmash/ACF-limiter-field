@@ -40,5 +40,11 @@ This has been tested in:
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.0.3 =
+* Added character overlay
+
+= 1.0.2 =
+* Added V3 support
+
+= 1.0.1 =
 * Initial release
