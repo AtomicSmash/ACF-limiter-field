@@ -38,6 +38,9 @@ This has been tested in:
 
 == Changelog ==
 
+= 1.0.4 =
+* Bug fixes with jQuery UI
+
 = 1.0.3 =
 * Added character overlay
 
