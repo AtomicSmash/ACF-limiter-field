@@ -58,7 +58,6 @@ class acf_field_limiter_plugin{
 	function register_fields()
 	{
 		include_once('limiter-v4.php');
-		include_once('limiter-wysiwyg-v4.php');
 	}
 	
 }
