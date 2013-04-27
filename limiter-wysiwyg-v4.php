@@ -34,8 +34,10 @@ class acf_field_wysiwyg_limited extends acf_field_wysiwyg{
 		    return $init;
 		}
 
-		$this->settings = array(
-			'dir' => apply_filters('acf/helpers/get_dir', __FILE__)
+		$this->settings = array(			
+			'path' => apply_filters('acf/helpers/get_path', __FILE__),
+			'dir' => apply_filters('acf/helpers/get_dir', __FILE__),
+			'version' => '1.0.5'			
 		);
 
 
