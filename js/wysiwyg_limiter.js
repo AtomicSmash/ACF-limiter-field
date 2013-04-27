@@ -34,7 +34,7 @@ var repeater = function ( e,ed ) {
 	if(ed.characterLimit != ""){
 
 		//console.log(e);
-		console.log(ed);
+		//console.log(ed);
 		
 	    var targetId = e.target.id;
 	    var text = '';
