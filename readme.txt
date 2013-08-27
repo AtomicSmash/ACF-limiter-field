@@ -38,6 +38,9 @@ This has been tested in:
 
 == Changelog ==
 
+= 1.0.5 =
+* Adding empty var fix
+
 = 1.0.4 =
 * Bug fixes with jQuery UI
 
