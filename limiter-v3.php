@@ -151,6 +151,12 @@ class acf_field_limiter extends acf_Field
 			</td>
 			<td>
 				<?php
+				
+				// Set to Yes if value isn't set
+				if(!isset($field['displayCount'])){
+					$field['displayCount'] = 1;
+				}
+				
 				do_action('acf/create_field', array(
 					'type'	=>	'radio',
 					'name'	=>	'fields['.$key.'][displayCount]',
