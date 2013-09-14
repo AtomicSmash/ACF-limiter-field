@@ -38,6 +38,9 @@ This has been tested in:
 
 == Changelog ==
 
+= 1.0.6 =
+* Removed broken image links
+
 = 1.0.5 =
 * Adding empty var fix
 

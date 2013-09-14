@@ -3,7 +3,7 @@
 Plugin Name: Advanced Custom Fields: Limiter
 Plugin URI: http://wordpress.org/extend/plugins/advanced-custom-fields-limiter-field/
 Description: This field provides a textarea that limits the number of characters the a user can add. The limit is cleanly represented by a jQuery Ui progress bar. You can define the number of characters on a per field basis.
-Version: 1.0.5
+Version: 1.0.6
 Author: Atomic Smash - David Darke
 Author URI: atomicsmash.co.uk
 License: GPLv2 or later
