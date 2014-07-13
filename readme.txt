@@ -11,7 +11,7 @@ This plugin provides a textarea that limits the number of characters a user can 
 
 == Description ==
 
-__Works with ACF v3 and v4__
+__Works with ACF v4 and v5__
 
 This plugin provides an Advanced Custom Field textarea that limits the number of characters a user can add. The limit is cleanly represented by a jQuery Ui progress bar. You can define the number of characters on a per field basis.
 
@@ -37,6 +37,9 @@ This has been tested in:
 
 
 == Changelog ==
+
+= 1.1.0 =
+* Updated plugin to work with ACF 5
 
 = 1.0.6 =
 * Removed broken image links
