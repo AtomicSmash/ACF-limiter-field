@@ -38,6 +38,9 @@ This has been tested in:
 
 == Changelog ==
 
+= 1.1.1 =
+* Small update to loaders
+
 = 1.1.0 =
 * Updated plugin to work with ACF 5
 
