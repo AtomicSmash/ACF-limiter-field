@@ -44,8 +44,12 @@ class acf_field_limiter extends acf_field {
 		*/
 		
 		$this->defaults = array(
+			'default_value'	=> '',
+			'new_lines'		=> '',
 			'character_number'	=> 150,
 			'display_characters'	=> 1,
+			'rows'	=> '',
+			'placeholder'	=> '',
 		);
 		
 		
@@ -90,16 +94,34 @@ class acf_field_limiter extends acf_field {
 		*  Please note that you must also have a matching $defaults value for the field name (font_size)
 		*/
 		
+		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Character number','acf-limiter'),
-			'instructions'	=> __('How many characters would you like to limit','acf-limiter'),
+			'label'			=> __('Default Value','acf'),
+			'instructions'		=> __('Appears when creating a new post','acf'),
+			'type'			=> 'textarea',
+			'name'			=> 'default_value',
+			'rows'			=> 4
+		));
+		
+		
+		// placeholder
+		acf_render_field_setting( $field, array(
+			'label'			=> __('Placeholder Text','acf'),
+			'instructions'		=> __('Appears within the input','acf'),
+			'type'			=> 'text',
+			'name'			=> 'placeholder',
+		));
+		
+		acf_render_field_setting( $field, array(
+			'label'			=> __('Character Limit','acf'),
+			'instructions'		=> __('How many characters would you like to limit','acf-limiter'),
 			'type'			=> 'number',
 			'name'			=> 'character_number',
-			'append'		=> 'characters'
+			'append'		=> __('characters','acf-limiter')
 		));
 
 		acf_render_field_setting( $field, array(
-			'label' => 'Display character limit',
+			'label' => __('Display character limit','acf-limiter'),
 			'instructions'	=> __('Show the number of characters left over the top of the progress bar.','acf-limiter'),
 			'type'  =>  'radio',
 			'name'  =>  'display_characters',
@@ -108,6 +130,29 @@ class acf_field_limiter extends acf_field {
 			0 =>  __("Yes",'acf'),
 			),
 			'layout'  =>  'horizontal'			
+		));
+		
+		// rows
+		acf_render_field_setting( $field, array(
+			'label'			=> __('Rows','acf'),
+			'instructions'		=> __('Sets the textarea height','acf'),
+			'type'			=> 'number',
+			'name'			=> 'rows',
+			'placeholder'		=> 4,
+			'append'		=> __('textlines','acf-limiter')
+		));
+		
+		// formatting
+		acf_render_field_setting( $field, array(
+			'label'			=> __('New Lines','acf'),
+			'instructions'		=> __('Controls how new lines are rendered','acf'),
+			'type'			=> 'select',
+			'name'			=> 'new_lines',
+			'choices'		=> array(
+				'wpautop'		=> __("Automatically add paragraphs",'acf'),
+				'br'			=> __("Automatically add &lt;br&gt;",'acf'),
+				''			=> __("No Formatting",'acf')
+			)
 		));
 
 	}
@@ -134,16 +179,27 @@ class acf_field_limiter extends acf_field {
 		/*
 		*  Create a simple text input using the 'font_size' setting.
 		*/
+		
+		// rows
+		if ( empty($field['rows']) ) {
+			$field['rows'] = 4;
+		}
+
+		// character limit
+		if ( empty($field['character_number']) || $field['character_number'] < 1 ) {
+			$character_number = 999999;
+		} else {
+			$character_number = $field['character_number'];
+		}
 				
 		
-		$field['value'] = str_replace('<br />','',$field['value']);
-		echo '<textarea id="' . $field['id'] . '" class="limiterField" data-characterlimit="'.$field['character_number'].'" rows="4" class="' . $field['class'] . '" name="' . $field['name'] . '" >' . $field['value'] . '</textarea>';
+		echo '<textarea id="' . $field['id'] . '" class="limiterField" data-characterlimit="'.$field['character_number'].'" rows="' . $field['rows'] . '" class="' . $field['class'] . '" name="' . $field['name'] . '" placeholder="' . $field['placeholder'] . '" >' . esc_textarea( $field['value'] ) . '</textarea>';
 		
 		echo('<div id="progressbar-'.$field['id'].'" class="progressBar"></div>');
 		
-		if(isset($field['display_characters'])){
-			if($field['display_characters'] == 0){
-				echo('<div class="counterWrapper"><span class="limiterCount"></span> / <span class="limiterTotal">'.$field['character_number'].'</span></div>');
+		if ( isset($field['display_characters']) ) {
+			if ( $field['display_characters'] == 0 ) {
+				echo('<div class="counterWrapper"><span class="limiterCount"></span> / <span class="limiterTotal">'.$character_number.'</span></div>');
 			}		
 		}
 	}
@@ -395,32 +451,31 @@ class acf_field_limiter extends acf_field {
 	*  @return	$value (mixed) the modified value
 	*/
 		
-	/*
-	
 	function format_value( $value, $post_id, $field ) {
 		
-		// bail early if no value
-		if( empty($value) ) {
-		
+		// bail early if no value or not for template
+		if( empty($value) || !is_string($value) ) {
+			
 			return $value;
-			
+		
 		}
+				
 		
-		
-		// apply setting
-		if( $field['font_size'] > 12 ) { 
+		// new lines
+		if( $field['new_lines'] == 'wpautop' ) {
 			
-			// format the value
-			// $value = 'something';
-		
+			$value = wpautop($value);
+			
+		} elseif( $field['new_lines'] == 'br' ) {
+			
+			$value = nl2br($value);
+			
 		}
 		
 		
 		// return
 		return $value;
 	}
-	
-	*/
 	
 	
 	/*
