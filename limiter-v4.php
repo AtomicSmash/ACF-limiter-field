@@ -149,7 +149,7 @@ class acf_field_limiter extends acf_field
 		echo('<div id="progressbar-'.$field['id'].'" class="progressBar"></div>');
 		
 		if(isset($field['displayCount'])){
-			if($field['displayCount'] == 0){
+			if($field['displayCount'] == 1){
 				echo('<div class="counterWrapper"><span class="limiterCount"></span> / <span class="limiterTotal">'.$field['character_number'].'</span></div>');
 			};
 		}
