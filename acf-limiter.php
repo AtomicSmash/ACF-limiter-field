@@ -10,7 +10,8 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-		
+load_plugin_textdomain( 'acf-limiter', false, dirname( plugin_basename(__FILE__) ) . '/lang/' );
+
 		
 function include_field_types_limiter( $version ) {
 
