@@ -1,10 +1,8 @@
 .counterWrapper{
 	height: 0px;
-	top: -22px;
+	top: -23px;
 	position: relative;
 	left: 8px;
-}
-
-.limiterTotal{
-	font-weight: bold;
+	color: #ccc;
+	margin-bottom: 10px;
 }
