@@ -1,0 +1,24 @@
+{
+  "name": "atomicsmash/acf-limiter-field",
+  "description": "Advanced Custom Fields: Limiter Field",
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "dev"
+  ],
+  "homepage": "http://www.atomicsmash.co.uk/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "David Darke",
+      "email": "david@atomicsmash.co.uk",
+      "homepage": "https://www.atomicsmash.co.uk/"
+    },
+    {
+      "name": "Atomic Smash",
+      "email": "mail@atomicsmash.co.uk",
+      "homepage": "https://www.atomicsmash.co.uk/"
+    }
+  ],
+  "type": "wordpress-plugin"
+}
