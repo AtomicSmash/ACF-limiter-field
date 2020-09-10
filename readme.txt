@@ -38,6 +38,9 @@ This has been tested in:
 
 == Changelog ==
 
+= 1.2.1 =
+* Added composer.json
+
 = 1.2.0 =
 * Fixed deprecated jQuery method due to WP 5.5.0 update
 
