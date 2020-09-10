@@ -7,7 +7,7 @@ Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin provides a textarea that limits the number of characters a user can add. The limit is cleanly represented by a jQuery UI progress bar. 
+This plugin provides a textarea that limits the number of characters a user can add. The limit is cleanly represented by a jQuery UI progress bar.
 
 == Description ==
 
@@ -37,6 +37,9 @@ This has been tested in:
 
 
 == Changelog ==
+
+= 1.2.0 =
+* Fixed deprecated jQuery method due to WP 5.5.0 update
 
 = 1.1.1 =
 * Small update to loaders
