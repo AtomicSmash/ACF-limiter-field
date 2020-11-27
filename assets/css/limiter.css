@@ -3,6 +3,13 @@
 	top: -23px;
 	position: relative;
 	left: 8px;
-	color: #ccc;
-	margin-bottom: 10px;
+	color: #333;
+  margin-bottom: 10px;
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    Courier,
+    monospace;
 }

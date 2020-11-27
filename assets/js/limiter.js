@@ -1,6 +1,7 @@
 (function ($) {
   function characterLimit(currentField) {
     progressBar = $(currentField).next(".progressBar");
+    console.log(progressBar);
 
     chars = $(currentField)[0].value.length;
 
@@ -40,13 +41,13 @@
     //Run characterLimit() when the field is being used
     $($el)
       .find(".limiterField")
-      .on("keyup focus", ".limiterField", function () {
+      .on("keyup focus", function () {
         characterLimit(this);
       });
   }
 
   if (typeof acf.add_action !== "undefined") {
-    /*
+    /**
      *  ready append (ACF5)
      *
      *  These are 2 events which are fired during the page load
@@ -67,7 +68,7 @@
       });
     });
   } else {
-    /*
+    /**
      *  acf/setup_fields (ACF4)
      *
      *  This event is triggered when ACF adds any new elements to the DOM.
