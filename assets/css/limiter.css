@@ -1,0 +1,10 @@
+.counterWrapper {
+  height: 0px;
+  top: -23px;
+  position: relative;
+  left: 8px;
+  color: #333;
+  margin-bottom: 10px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
+    monospace;
+}
