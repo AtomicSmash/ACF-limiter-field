@@ -1,7 +1,7 @@
 === Advanced Custom Fields: Limiter Field ===
 Contributors: Atomic Smash
 Tags: ACF, ACF5, ACF4, Advanced Custom Fields, Limiter, character number, word count
-Requires at least: 3.6.0
+Requires at least: 4.9.7
 Tested up to: 5.5.3
 Stable tag: trunk
 License: GPLv2 or later
@@ -34,10 +34,10 @@ This has been tested in:
 
 == Changelog ==
 
-= 1.3.1 =
+= 1.3.0 =
 * Restructured plugin
 * Fixed bug affecting field loading
-* Remove support for ACF3
+* Removed support for ACF3
 
 = 1.2.1 =
 * Added composer.json

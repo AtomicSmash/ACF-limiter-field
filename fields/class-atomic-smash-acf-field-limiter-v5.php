@@ -237,7 +237,6 @@ class atomic_smash_acf_field_limiter extends acf_field
     *  @return	n/a
     */
 
-
     public function input_admin_enqueue_scripts()
     {
 
@@ -276,7 +275,6 @@ class atomic_smash_acf_field_limiter extends acf_field
     *
     *  @return	$value (mixed) the modified value
     */
-
 
     public function format_value($value, $post_id, $field)
     {

@@ -46,7 +46,7 @@ class atomic_smash_acf_plugin_limiter
         // settings
         // - these will be passed into the field class.
         $this->settings = array(
-            'version'	=> '1.0.0',
+            'version'	=> '1.3.0',
             'url'		=> plugin_dir_url(__FILE__),
             'path'		=> plugin_dir_path(__FILE__)
         );

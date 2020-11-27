@@ -1,7 +1,6 @@
 (function ($) {
   function characterLimit(currentField) {
     progressBar = $(currentField).next(".progressBar");
-    console.log(progressBar);
 
     chars = $(currentField)[0].value.length;
 
